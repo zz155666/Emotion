@@ -1,0 +1,16 @@
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\bin\x86\Debug\XamlAnimatedGif.WinRT.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\bin\x86\Debug\XamlAnimatedGif.WinRT.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\bin\x86\Debug\XamlAnimatedGif.WinRT.pri
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\XamlAnimatedGif.WinRT.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\XamlAnimatedGif.WinRT.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\priconfig.xml
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\layout.resfiles
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\layout.resfiles.intermediate
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\resources.resfiles
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\pri.resfiles
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\qualifiers.txt
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\user\Documents\Visual Studio 2015\Projects\Emotion\XamlAnimatedGif.WinRT\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
