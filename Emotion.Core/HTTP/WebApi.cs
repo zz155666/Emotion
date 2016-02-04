@@ -15,11 +15,11 @@ namespace Emotion.Core.HTTP
       /// <summary>
       /// 测试服务器地址
       /// </summary>
-       private static string home = "http://182.92.101.144:8080/ibiaoqing/";
+      // private static string home = "http://182.92.101.144:8080/ibiaoqing/";
        /// <summary>
        /// 正式服务器地址
        /// </summary>
-     // private static string home = "http://123.57.155.230:8080/ibiaoqing/";
+      private static string home = "http://123.57.155.230:8080/ibiaoqing/";
         private static string biaoqinglist = home + "admin/expre/listBy.do";
         private static string imageList = home + "admin/expre/getByeId.do";
       /// <summary>
