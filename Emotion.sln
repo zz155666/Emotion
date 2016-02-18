@@ -7,15 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotion", "Emotion\Emotion.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotion.Core", "Emotion.Core\Emotion.Core.csproj", "{95197336-9448-4429-A865-F6C9ECAFCFC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlAnimatedGif.WinRT", "XamlAnimatedGif.WinRT\XamlAnimatedGif.WinRT.csproj", "{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "XamlAnimatedGif.Shared", "XamlAnimatedGif.Shared\XamlAnimatedGif.Shared.shproj", "{D408EEBD-D9F1-41FB-9161-546F5BC0DAD4}"
-EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		XamlAnimatedGif.Shared\XamlAnimatedGif.Shared.projitems*{deef07f4-00a2-404a-ab60-2dcda4cbe0f1}*SharedItemsImports = 4
-		XamlAnimatedGif.Shared\XamlAnimatedGif.Shared.projitems*{d408eebd-d9f1-41fb-9161-546f5bc0dad4}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -27,7 +19,8 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{395AA421-97D5-4D51-8945-8381FEC70365}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{395AA421-97D5-4D51-8945-8381FEC70365}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{395AA421-97D5-4D51-8945-8381FEC70365}.Debug|Any CPU.Build.0 = Debug|x64
 		{395AA421-97D5-4D51-8945-8381FEC70365}.Debug|ARM.ActiveCfg = Debug|ARM
 		{395AA421-97D5-4D51-8945-8381FEC70365}.Debug|ARM.Build.0 = Debug|ARM
 		{395AA421-97D5-4D51-8945-8381FEC70365}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -47,8 +40,8 @@ Global
 		{395AA421-97D5-4D51-8945-8381FEC70365}.Release|x86.ActiveCfg = Release|x86
 		{395AA421-97D5-4D51-8945-8381FEC70365}.Release|x86.Build.0 = Release|x86
 		{395AA421-97D5-4D51-8945-8381FEC70365}.Release|x86.Deploy.0 = Release|x86
-		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Debug|Any CPU.Build.0 = Debug|x64
 		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Debug|ARM.ActiveCfg = Debug|ARM
 		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Debug|ARM.Build.0 = Debug|ARM
 		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Debug|x64.ActiveCfg = Debug|x64
@@ -63,22 +56,6 @@ Global
 		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Release|x64.Build.0 = Release|x64
 		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Release|x86.ActiveCfg = Release|x86
 		{95197336-9448-4429-A865-F6C9ECAFCFC6}.Release|x86.Build.0 = Release|x86
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Debug|ARM.ActiveCfg = Debug|ARM
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Debug|ARM.Build.0 = Debug|ARM
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Debug|x64.ActiveCfg = Debug|x64
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Debug|x64.Build.0 = Debug|x64
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Debug|x86.ActiveCfg = Debug|x86
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Debug|x86.Build.0 = Debug|x86
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Release|ARM.ActiveCfg = Release|ARM
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Release|ARM.Build.0 = Release|ARM
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Release|x64.ActiveCfg = Release|x64
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Release|x64.Build.0 = Release|x64
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Release|x86.ActiveCfg = Release|x86
-		{DEEF07F4-00A2-404A-AB60-2DCDA4CBE0F1}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
