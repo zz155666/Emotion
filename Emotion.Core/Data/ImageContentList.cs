@@ -66,6 +66,7 @@ namespace Emotion.Core.Data
                     DataLoading();
                 }
                     list = await WebApi.GetReCentIamgeList(_eid);
+            
             }
             catch (Exception ex)
             {

@@ -15,20 +15,21 @@ namespace Emotion.Core.HTTP
       /// <summary>
       /// 测试服务器地址
       /// </summary>
-      // private static string home = "http://182.92.101.144:8080/ibiaoqing/";
+       private static string home = "http://182.92.101.144:8080/ibiaoqing/";
        /// <summary>
        /// 正式服务器地址
        /// </summary>
-      private static string home = "http://123.57.155.230:8080/ibiaoqing/";
+   // private static string home = "http://123.57.155.230:8080/ibiaoqing/";
         private static string biaoqinglist = home + "admin/expre/listBy.do";
         private static string imageList = home + "admin/expre/getByeId.do";
+        private static string fullimage = home + "admin/expre/download.do?pId=";
       /// <summary>
       /// 获取表情包列表
       /// </summary>
       /// <param name="currentpage">当前页数</param>
       /// <returns></returns>
         public async static Task<List<HomeItem>> GetRecentBiaoQingList(int currentpage,bool isHot,string eName)
-        {
+      {
             List<HomeItem> home_item = new List<HomeItem>();
              string url = "";
           if (isHot)
@@ -41,7 +42,7 @@ namespace Emotion.Core.HTTP
             else
             {
                 url = biaoqinglist + "?status=Y&status1=B&pageNumber=" + currentpage;
-            }  
+            }
             string json = await BaseService.SendGetRequest(url);
             string jsonstring = "{\"json\": " + json + "}";
             JsonObject jsonObject = JsonObject.Parse(jsonstring);
@@ -83,6 +84,8 @@ namespace Emotion.Core.HTTP
                 {
                     JsonObject jsonprivate = p.GetObject() as JsonObject;
                     ImageContent home = CopyToT<ImageContent>(jsonprivate, new ImageContent());
+                    home.Url = fullimage + home.pId;
+                    home.uri = new Uri(fullimage + home.pId);
                     Imagelist.Add(home);
                 }
                 //JsonArray count = jsonarray[1].GetArray();
@@ -93,7 +96,8 @@ namespace Emotion.Core.HTTP
             }
             return Imagelist;
         }
-        /// <summary>
+
+      /// <summary>
         /// 利用反射获取json对象的属性
         /// </summary>
         /// <typeparam name="T"></typeparam>

@@ -17,5 +17,6 @@ namespace Emotion.Core.ViewModels
         public string statusId { get; set; }
         public string imageFile { get; set; }
         public int size { get; set; }
+        public Uri uri { get; set; }
     }
 }

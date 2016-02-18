@@ -79,7 +79,8 @@ namespace Emotion.Core.Data
                 {
                     DataLoading();
                 }
-                    list = await WebApi.GetRecentBiaoQingList(_current_page, _isHot, _eName);
+               
+                list = await WebApi.GetRecentBiaoQingList(_current_page, _isHot, _eName);
             }
             catch (Exception ex)
             {
