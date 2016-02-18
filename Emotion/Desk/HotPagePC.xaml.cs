@@ -1,28 +1,18 @@
-﻿using Emotion.Core.Data;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using System;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Emotion.Core.Data;
 
 // “空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234238 上提供
 
-namespace Emotion
+namespace Emotion.Desk
 {
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class HomePage : Page
+    public sealed partial class HotPagePc : Page
     {
         /// <summary>
         /// 首页表情列表
@@ -32,14 +22,14 @@ namespace Emotion
         /// 本类构造函数
         /// </summary>
         /// <param name="sign"></param>
-        public HomePage( )
+        public HotPagePc( )
         {
             this.InitializeComponent();
             if (App.AlwaysShowNavigation)
             {
                 Home.Visibility = Visibility.Collapsed;
             }
-            BlogsListView.ItemsSource = _list_blogs = new HomeItemList();
+            BlogsListView.ItemsSource = _list_blogs = new HomeItemList(true);
             _list_blogs.DataLoaded += _list_blogs_DataLoaded;
             _list_blogs.DataLoading += _list_blogs_DataLoading;
         }

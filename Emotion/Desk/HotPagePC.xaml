@@ -1,20 +1,19 @@
 ﻿<Page
-    x:Class="Emotion.EmotionContentPage"
+    x:Class="Emotion.Desk.HotPagePc"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Emotion"
+    xmlns:local="using:Emotion.Desk"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:gif="using:XamlAnimatedGif"
     xmlns:data="using:Emotion.Core.ViewModels">
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-
         <RelativePanel Grid.Row="0"
                        Background="{ThemeResource SystemControlHighlightAltListAccentLowBrush}"
                        Padding="0,9,0,9">
@@ -29,24 +28,20 @@
                     Click="Home_Click"
                     >
             </Button>
-            <Button Name="Back"
-                    Content="&#xE0A6;"
-                    FontFamily="Segoe MDL2 Assets"
-                    FontSize="24"
-                    RelativePanel.RightOf="Home"
-                    RelativePanel.AlignVerticalCenterWithPanel="True"
-                    Background="Transparent"
-                    Click="Back_Click"
-                    >
-                
-            </Button>
             <TextBlock Name="PageTitle"
-                       Text="正文内容"
-                       RelativePanel.RightOf="Back"
+                       Text="最热"
+                       RelativePanel.RightOf="Home"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
                        FontSize="24"
                        FontFamily="微软雅黑"
-                       Padding="10,0,0,0">
+                       Padding="20,0,0,0">
+            </TextBlock>
+            <TextBlock Name="ListCount"
+                       FontSize="14"
+                       RelativePanel.RightOf="PageTitle"
+                       RelativePanel.AlignTopWith="PageTitle"
+                       Margin="10,0,0,0"
+                       Text="">
             </TextBlock>
             <Button Name="RefreshButton"
                     Content="&#xE117;"
@@ -59,45 +54,46 @@
                     Click="RefreshButton_Click">
             </Button>
         </RelativePanel>
-        <StackPanel Grid.Row="1">
-
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Image Name="ContentIamge" 
-                Height="200"
-               >
-                </Image>
-                
-            </StackPanel>
-            <Rectangle Height="1"
-                       Fill="LightGray">
-            </Rectangle>
-        </StackPanel>
-        <Grid Grid.Row="2">
-            <GridView Name="ContextList"
-                      Padding="10,10,10,10"
+        <GridView Name="BlogsListView"
+                  Grid.Row="1"
+                  Padding="10,10,10,10"
                   CanReorderItems="True"
                   IsItemClickEnabled="True"
                   SelectionMode="None"
-                  ItemClick="ContextList_ItemClick"
-                  ItemsSource="{x:Bind _iamgeContentList}">
-                <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="data:ImageContent">
-                        <Image Source="{x:Bind Url}"
+                  ItemClick="BlogsListView_ItemClick"
+                  ItemsSource="{x:Bind _list_blogs}"
+                  >
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:HomeItem">
+                    <Grid  Padding="25,0,25,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="220"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="{x:Bind coverUrl}"
                                        Width="200"
-                               Height="200"
                                        RelativePanel.AlignLeftWithPanel="True"
                                        Name="coverUrl"
                                        >
                         </Image>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-        </Grid>
-        <ProgressRing Grid.Row="2"
+                        <Image Grid.Row="1" Width="200" RelativePanel.AlignBottomWithPanel="True"  VerticalAlignment="Center" Source="Assets/img_expression-package.png">
+                        </Image>
+                        <TextBlock Grid.Row="1" Text="{x:Bind eName}" 
+                                               FontSize="22"
+                                               HorizontalAlignment="Center"
+                                   Margin="10,10,10,5"
+                                               >
+                        </TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+
+        </GridView>
+        <ProgressRing Grid.Row="1"
                       Name="Loading"
-                      IsActive="True"
                       Width="100"
-                      Height="100">
+                      Height="100"
+                      IsActive="True">
             
         </ProgressRing>
     </Grid>

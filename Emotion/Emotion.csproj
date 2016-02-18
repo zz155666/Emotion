@@ -103,14 +103,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Desk\HotPagePc.xaml.cs">
+      <DependentUpon>HotPagePc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmotionContentPage.xaml.cs">
       <DependentUpon>EmotionContentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPagePCHot.xaml.cs">
-      <DependentUpon>MainPagePCHot.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPagePC.xaml.cs">
       <DependentUpon>MainPagePC.xaml</DependentUpon>
@@ -162,15 +162,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Desk\HotPagePc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="EmotionContentPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="HomePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MainPagePCHot.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -192,6 +192,9 @@
       <Project>{deef07f4-00a2-404a-ab60-2dcda4cbe0f1}</Project>
       <Name>XamlAnimatedGif.WinRT</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mobile\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
