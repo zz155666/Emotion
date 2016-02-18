@@ -188,13 +188,12 @@
       <Project>{95197336-9448-4429-a865-f6c9ecafcfc6}</Project>
       <Name>Emotion.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\XamlAnimatedGif.WinRT\XamlAnimatedGif.WinRT.csproj">
-      <Project>{deef07f4-00a2-404a-ab60-2dcda4cbe0f1}</Project>
-      <Name>XamlAnimatedGif.WinRT</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mobile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

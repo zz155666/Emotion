@@ -43,7 +43,6 @@ namespace Emotion
             {
                 Home.Visibility = Visibility.Collapsed;
             }
-            
         }
 
 
@@ -113,26 +112,26 @@ namespace Emotion
             if (pp is ImageContent)
             {
                 var g = pp as ImageContent;
+                ContentIamge.UriSource = new Uri(g.Url);
+//                DataPackage dataPackage = new DataPackage();
+//                dataPackage.SetBitmap(RandomAccessStreamReference.CreateFromFile(await StorageFile.GetFileFromApplicationUriAsync(new Uri(g.Url))));
+//                Clipboard.SetContent(dataPackage);
 
-                DataPackage dataPackage = new DataPackage();
-                dataPackage.SetBitmap(RandomAccessStreamReference.CreateFromUri(new Uri(g.Url)));
-                Clipboard.SetContent(dataPackage);
-                ContentIamge.Source = new BitmapImage(new Uri(g.Url));
-           //     var Task2 = Task.Factory.StartNew(async () =>
-           //{
-           //    WebRequest request = WebRequest.Create(g.Url);
-           //    WebResponse response = await request.GetResponseAsync();
-           //    IBuffer buffer = null;
-           //    Stream stream = response.GetResponseStream();
-           //    var inputstream = stream.AsInputStream();
-           //    using (var dataReader = new DataReader(inputstream))
-           //    {
-           //        await dataReader.LoadAsync((uint)stream.Length);
-           //        buffer = dataReader.DetachBuffer();
-           //    }
-           //    var iRandomAccessStream = new InMemoryRandomAccessStream();
-           //    await iRandomAccessStream.WriteAsync(buffer);
-           //});
+                //     var Task2 = Task.Factory.StartNew(async () =>
+                //{
+                //    WebRequest request = WebRequest.Create(g.Url);
+                //    WebResponse response = await request.GetResponseAsync();
+                //    IBuffer buffer = null;
+                //    Stream stream = response.GetResponseStream();
+                //    var inputstream = stream.AsInputStream();
+                //    using (var dataReader = new DataReader(inputstream))
+                //    {
+                //        await dataReader.LoadAsync((uint)stream.Length);
+                //        buffer = dataReader.DetachBuffer();
+                //    }
+                //    var iRandomAccessStream = new InMemoryRandomAccessStream();
+                //    await iRandomAccessStream.WriteAsync(buffer);
+                //});
 
             }
         }

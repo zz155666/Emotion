@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageLib;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +8,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -14,6 +16,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using ImageLib.Cache.Memory.CacheImpl;
+using ImageLib.Cache.Storage;
+using ImageLib.Cache.Storage.CacheImpl;
+using ImageLib.Gif;
 
 namespace Emotion
 {
@@ -42,7 +48,15 @@ namespace Emotion
             this.Suspending += OnSuspending;
             this.Resuming += OnResuming;
             AlwaysShowNavigation = true;
-        //    new BackgroundProxy().Register();
+            ImageLoader.Initialize(new ImageConfig.Builder()
+            {
+                CacheMode = ImageLib.Cache.CacheMode.MemoryAndStorageCache,
+                MemoryCacheImpl = new LRUMemoryCache(),
+                StorageCacheImpl = new LimitedStorageCache(ApplicationData.Current.LocalCacheFolder,
+             "cache", new SHA1CacheGenerator(), 1024 * 1024 * 1024)
+            }.AddDecoder<GifDecoder>().Build(), true);
+
+            //    new BackgroundProxy().Register();
         }
 
         /// <summary>

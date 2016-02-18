@@ -67,7 +67,7 @@ namespace Emotion
             {
                 mainSplitView.IsPaneOpen = false;
                 _preSelectNavigation = mainNavigationList.SelectedIndex;
-                mainFrame.Navigate(typeof(Desk.HomePage));
+                mainFrame.Navigate(typeof(HomePage));
             }
             if (tapped_item != null && tapped_item.Tag != null && tapped_item.Tag.ToString().Equals("2")) //热门
             {
