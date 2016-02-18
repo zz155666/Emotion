@@ -27,10 +27,21 @@ namespace Emotion.Core.HTTP
       /// </summary>
       /// <param name="currentpage">当前页数</param>
       /// <returns></returns>
-        public async static Task<List<HomeItem>> GetRecentBiaoQingList(int currentpage)
+        public async static Task<List<HomeItem>> GetRecentBiaoQingList(int currentpage,bool isHot,string eName)
         {
             List<HomeItem> home_item = new List<HomeItem>();
-            string url = biaoqinglist + "?status=Y&status1=B&pageNumber="+ currentpage;
+             string url = "";
+          if (isHot)
+          {
+                url = biaoqinglist + "?status=Y&status1=B&pageNumber=" + currentpage+ "&count=yes";
+            }else if (!string.IsNullOrEmpty(eName))
+            {
+                url= biaoqinglist + "?status=Y&status1=B&pageNumber=" + currentpage + "&eName="+ eName;
+            }
+            else
+            {
+                url = biaoqinglist + "?status=Y&status1=B&pageNumber=" + currentpage;
+            }  
             string json = await BaseService.SendGetRequest(url);
             string jsonstring = "{\"json\": " + json + "}";
             JsonObject jsonObject = JsonObject.Parse(jsonstring);

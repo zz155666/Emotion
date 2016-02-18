@@ -20,6 +20,14 @@ namespace Emotion.Core.Data
         private bool _busy = false;
         private bool _has_more_items = false;
         private int _current_page = 1;
+        /// <summary>
+        /// 是否最热；
+        /// </summary>
+        private bool _isHot;
+        /// <summary>
+        /// 搜索关键字
+        /// </summary>
+        private string _eName;
         public event DataLoadingEventHandler DataLoading;
         public event DataLoadedEventHandler DataLoaded;
         public int TotalCount
@@ -41,9 +49,11 @@ namespace Emotion.Core.Data
                 _has_more_items = value;
             }
         }
-        public HomeItemList()
+        public HomeItemList(bool isHot=false,string eName="")
         {
             HasMoreItems = true;
+            _isHot = isHot;
+            _eName = eName;
         }
 
         public void DoRefresh()
@@ -69,7 +79,7 @@ namespace Emotion.Core.Data
                 {
                     DataLoading();
                 }
-                    list = await WebApi.GetRecentBiaoQingList(_current_page);
+                    list = await WebApi.GetRecentBiaoQingList(_current_page, _isHot, _eName);
             }
             catch (Exception ex)
             {
